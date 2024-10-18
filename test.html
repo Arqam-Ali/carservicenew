@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Sanctuary - Motors</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Slick Carousel CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+        <!-- Include Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+        <style>
+            :root {
+    --primary-color: #2f2e2e;
+    --secondry-color: #b0aaa9;
+    --black-color: #000;
+    --white-color: #fff;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeInScaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.container-animition {
+    opacity: 0;
+    /* Ensure elements are hidden initially */
+}
+
+.active {
+    animation: fadeInScaleUp 1.2s ease-in-out forwards;
+    animation-delay: 0.2s;
+    /* Optional delay for staggered effects */
+}
+
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.navbar-custom {
+    border-top: 1px solid var(--secondry-color);
+    border-bottom: 1px solid var(--secondry-color);
+}
+
+.navbar-custom .nav-item .nav-link {
+    color: var(--blackish-color);
+}
+
+.navbar-custom .nav-item .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.navbar-custom .contact-info {
+    border-left: 1px solid var(--secondry-color);
+    padding-left: 15px;
+}
+
+
+.navbar-custom .contact-info {
+    border-left: 1px solid var(--blackish-color);
+    padding-left: 15px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link2 {
+    padding-right: 0.5rem;
+    padding-left: 2.5rem !important;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--white-color);
+    transition: 500ms;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link2:hover {
+    color: var(--secondry-color);
+}
+
+.navbar-nav .nav-link .icon-hover {
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    padding: 7px 8px;
+    margin: 0 5px;
+    transition: 500ms;
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+    color: var(--secondry-color);
+}
+
+/* .navbar-nav .nav-link .icon-hover:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+} */
+.navbar-light .navbar-toggler {
+    background: white;
+}
+
+.nav-active {
+    color: var(--secondry-color) !important;
+}
+
+/* Home Page  */
+.banner-sec {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 800px;
+}
+
+.banner-sec::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.banner-sec * {
+    position: relative;
+    z-index: 2;
+    /* Ensure any content inside the banner is above the overlay */
+}
+
+.banner-sec-wrap {
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.banner-sec-wrap-svg {
+    border: 2px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 30px;
+}
+
+.banner-sec-wrap-head {
+    color: var(--white-color);
+    line-height: 1em;
+    font-size: 50px;
+}
+
+.banner-sec-wrap-txt {
+    color: var(--white-color);
+    font-size: 24px;
+}
+
+.banner-sec-wrap2 {
+    text-align: center;
+    margin-top: 20rem;
+}
+
+.banner-icon {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--white-color);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.second-sec {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.second-sec-head {
+    color: var(--white-color);
+    text-align: center;
+    font-size: 34px;
+    padding: 30px 0;
+}
+
+.border-bottom {
+    border-bottom: 2px solid var(--white-color) !important;
+}
+
+.second-sec-service {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.second-icon {
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+    padding: 30px;
+    border-radius: 50%;
+    font-size: 70px;
+}
+
+.second-icon2 {
+    color: var(--white-color);
+    border: 2px solid var(--white-color);
+    padding: 30px 25px;
+    border-radius: 50%;
+    font-size: 70px;
+}
+
+.second-sec-service-head {
+    margin-top: 1rem;
+    color: var(--white-color);
+    font-weight: 200;
+}
+
+.second-sec-service-txt {
+    margin-top: 1rem;
+    color: var(--white-color);
+    padding: 10px;
+}
+
+.third-sec {
+    margin-top: 5rem;
+}
+
+.third-sec-head {
+    color: var(--black-color);
+    text-align: center;
+    font-size: 34px;
+    padding: 30px 0;
+}
+
+.border-bottom2 {
+    border-bottom: 2px solid var(--primary-color) !important;
+}
+
+.third-sec-txt {
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.third-sec .row {
+    margin: 0;
+    padding: 0;
+}
+
+.third-sec-wrap {
+    margin-top: 3rem;
+}
+
+.third-sec-wrap .row {
+    padding: 0;
+    margin: 0;
+}
+
+.third-sec-wrap .row .col-md-4 {
+    padding: 0;
+    margin: 0;
+}
+
+.third-sec-card {
+    position: relative;
+}
+
+.third-sec-wrap-img {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    transition: 500ms;
+}
+
+/* Overlay styles */
+.third-sec-wrap-img .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Dark overlay */
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.third-sec-card:hover .third-sec-wrap-img .overlay {
+    opacity: 1;
+}
+
+.third-sec-wrap-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 70px 30px;
+    color: var(--white-color);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 500ms;
+    text-align: center;
+}
+
+.third-sec-wrap-txt,
+.third-sec-wrap-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 120px 30px;
+    color: var(--white-color);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.third-sec-card:hover .third-sec-wrap-txt,
+.third-sec-card:hover .third-sec-wrap-icons,
+.third-sec-card:hover .third-sec-wrap-head {
+    opacity: 1;
+}
+
+.third-sec-wrap-icons {
+    display: flex;
+    margin-top: 120px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.third-sec-wrap-icons i {
+    color: var(--white-color);
+    font-size: 30px;
+    padding: 10px;
+}
+
+.fourth-sec {
+    margin-top: 5rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.fourth-sec-card {
+    width: 100%;
+    background-color: var(--white-color);
+    margin: 5rem 0;
+    padding: 5rem 100px;
+}
+
+.fourth-sec-txt {
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.fifth-sec {
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.sisth-sec {
+    padding-top: 5rem;
+    margin: 0;
+}
+
+.sisth-sec-img {
+    width: 100%;
+}
+
+.sisth-sec-wrap {
+    margin-top: 3rem;
+    background-color: var(--white-color);
+}
+
+.sisth-sec-innerwrap {
+    margin-top: 2rem;
+    padding: 20px 70px;
+}
+
+.sisth-sec-innerwrap-txt {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.sisth-sec-innerwrap-txt:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.sisth-sec-innerwrap-txt2 {
+    margin: 2rem 0;
+}
+
+.sisth-sec-innerwrap2 {
+    margin-top: 2rem;
+    padding: 20px 20px;
+}
+
+.sis-form-imput {
+    width: 90%;
+    height: 35px !important;
+}
+
+.sis-form-label {
+    margin-top: 20px;
+}
+
+.sis-form-textarea {
+    width: 90%;
+    height: 120px !important;
+}
+
+.sisth-sec-innerwrap-form form button {
+    width: 90%;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 50px 10px;
+}
+
+.footer-sec-wrap {
+    text-align: center;
+    width: 100%;
+}
+
+.footer-sec-wrap p {
+    color: var(--white-color);
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 425px) {
+    .banner-sec {
+        height: 500px;
+    }
+
+    .banner-sec-wrap {
+        margin-top: 7rem;
+    }
+
+    .banner-sec-wrap-svg {
+        padding: 20px;
+    }
+
+    .banner-sec-wrap-head {
+        font-size: 40px;
+    }
+
+    .banner-sec-wrap-txt {
+        font-size: 20px;
+    }
+
+    .banner-sec-wrap2 {
+        margin-top: 6rem;
+    }
+
+    .second-sec {
+        padding: 0 0;
+    }
+
+    .third-sec-wrap-img .overlay,
+    .third-sec-wrap-img .overlay,
+    .third-sec-wrap-head,
+    .third-sec-wrap-txt,
+    .third-sec-wrap-icons {
+        opacity: 1;
+    }
+
+    /* .border-bottom {
+        border: none !important;
+    } */
+    .third-sec {
+        margin-top: 0rem;
+    }
+
+    .fourth-sec-card {
+        padding: 3rem 60px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .banner-sec {
+        height: 450px;
+    }
+
+    .banner-sec-wrap-svg {
+        padding: 17px;
+    }
+
+    .banner-sec-wrap-head {
+        font-size: 35px;
+    }
+
+    .banner-sec-wrap-txt {
+        font-size: 17px;
+    }
+
+    .banner-sec-wrap2 {
+        margin-top: 4rem;
+    }
+
+    .fourth-sec-card {
+        padding: 3rem 40px;
+    }
+
+    .sisth-sec {
+        padding-bottom: 5rem;
+    }
+
+    footer {
+        background-color: var(--primary-color);
+        padding: 35px 10px;
+    }
+}
+        </style>
+    </head>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black pt-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="max-height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+               
+                <ul class="navbar-nav ml-auto mr-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2 nav-active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#services">Service</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link nav-link2 dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <a class="dropdown-item" href="#">About Us</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Team</a>
+                            <a class="dropdown-item" href="#">FAQ</a>
+                        </div>
+                    </li> -->
+                   
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#contact-us">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#book-online">Book Online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="https://kbconstruction.pk/car/">Current Stock</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#"><i class="fa-solid fa-user icon-hover"></i> Log In</a>
+                    </li> -->
+                    <div class="vertical-border"></div>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="banner-sec" style="background-image: url('assets/img/banner.jpeg');">
+        <div class="container-fluid container-animition">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner-sec-wrap">
+                        <div class="banner-sec-wrap-svg">
+                            <svg preserveAspectRatio="xMidYMid meet" data-bbox="26.453 27.436 147.035 145.129"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="26.453 27.436 147.035 145.129"
+                                role="presentation" aria-hidden="true" width="100px" fill="white">
+                                <g>
+                                    <path
+                                        d="M63.2 136.9c8.4 8.4 8.4 22.1 0 30.5-2.3 2.3-5.1 4.1-8.2 5.1-.8.3-1.6-.5-1.4-1.3l4.7-16c.1-.5.1-1-.2-1.3-4.6-6.2-12.4-8.5-19.6-5.7-.4.2-.8.5-.9 1L32.9 165c-.2.8-1.3 1-1.9.4-6.6-8.5-6-20.7 1.7-28.5 8.4-8.4 22.1-8.5 30.5 0zm0-73.8c8.4-8.4 8.4-22.1 0-30.5-2.3-2.3-5.1-4.1-8.2-5.1-.8-.3-1.6.5-1.4 1.3l4.7 16c.1.5.1 1-.2 1.3-4.6 6.2-12.4 8.5-19.6 5.7-.4-.2-.8-.5-.9-1L32.9 35c-.2-.8-1.3-1.1-1.9-.4-6.6 8.5-6 20.7 1.7 28.5 8.4 8.4 22.1 8.5 30.5 0zm104 0c7.7-7.7 8.4-20 1.7-28.5-.5-.7-1.6-.5-1.9.4l-4.6 15.9c-.1.5-.5.9-.9 1-7.2 2.8-15 .5-19.6-5.7-.3-.4-.4-.9-.2-1.3l4.7-16c.2-.8-.6-1.6-1.4-1.3-3.1 1.1-5.9 2.9-8.2 5.1-8.4 8.4-8.4 22 0 30.5 8.4 8.4 22.1 8.3 30.4-.1zm-37.8 2.4c1.5 2 3.1 3.5 5.1 5.1l-21.8 21.8 5.1 5.1L138 77.3c3.3-3.3 7.4-5.7 11.8-7-5-.5-9.8-2.6-13.6-6.4-3.8-3.8-5.9-8.7-6.4-13.6-1.3 4.5-3.7 8.5-7 11.8l-20.2 20.2 5.1 5.1 21.7-21.9zm-58.8 69c-1.5-2-3.1-3.5-5.1-5.1l21.8-21.8-5.1-5.1L62 122.7c-3.3 3.3-7.4 5.7-11.8 7 5 .5 9.8 2.6 13.6 6.4 3.8 3.8 5.9 8.7 6.4 13.6 1.3-4.5 3.7-8.5 7-11.8l20.2-20.2-5.1-5.1-21.7 21.9zm96.6 2.4c-8.4-8.4-22-8.4-30.4 0-8.4 8.4-8.4 22.1 0 30.5 2.3 2.3 5.1 4.1 8.2 5.1.8.3 1.6-.5 1.4-1.3l-4.7-16c-.1-.5-.1-1 .2-1.3 4.6-6.2 12.4-8.5 19.6-5.7.4.2.8.5.9 1l4.6 15.9c.2.8 1.3 1 1.9.4 6.7-8.7 6-20.9-1.7-28.6zm-31-.7c-3.8 3.8-5.9 8.7-6.4 13.6-1.3-4.5-3.7-8.5-7-11.8L62.1 77.2c-3.3-3.3-7.4-5.7-11.8-7 5-.5 9.8-2.6 13.6-6.4 3.8-3.8 5.9-8.7 6.4-13.6 1.3 4.5 3.7 8.5 7 11.8l60.7 60.8c3.3 3.3 7.4 5.7 11.8 7-5 .5-9.8 2.6-13.6 6.4zm-1.8-6.8L70.6 65.5c-1.5 2-3.1 3.5-5.1 5.1l63.8 63.9c1.6-2 3.2-3.6 5.1-5.1z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                        <h1 class="banner-sec-wrap-head">SANCTUARY</h1>
+                        <p class="banner-sec-wrap-txt">MOTORS LIMITED</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="banner-sec-wrap2">
+                        <i class="fa-brands fa-facebook-f banner-icon" style="padding: 10px 12px;"></i>
+                        <i class="fa-brands fa-pinterest-p banner-icon" style="padding: 10px 11px;"></i>
+                        <i class="fa-brands fa-instagram banner-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second-sec" style="background-image: url('assets/img/sec2bg.webp');">
+        <div class="container-fluid container-animition" id="services">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <h2 class="second-sec-head">SERVICES</h2>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2 border-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container-animition">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <div class="second-sec-service">
+                        <i class="fa-solid fa-screwdriver-wrench second-icon"></i>
+                        <h3 class="second-sec-service-head">REPAIRS</h3>
+                        <p class="second-sec-service-txt">General Repairs, <br> Specialist Repairs <br>& Vintage Parts
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="second-sec-service">
+                        <i class="fa-solid fa-truck-monster second-icon2"></i>
+                        <h3 class="second-sec-service-head">UPHOLSTERY</h3>
+                        <p class="second-sec-service-txt">A Range of Fabrics, <br> Including Vintage Leathers, <br>&
+                            Wide Variety of Colors</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="second-sec-service">
+                        <i class="fa-solid fa-spray-can second-icon"></i>
+                        <h3 class="second-sec-service-head">PAINTWORK</h3>
+                        <p class="second-sec-service-txt">Spray paint, Custom <br> Stencilling & Variety of <br>Custom
+                            Made Artwork</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="third-sec">
+        <div class="container container-animition">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h2 class="third-sec-head" >CURRENT STOCK</h2>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2 border-bottom2"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p class="third-sec-txt">A collection of cars we've renovated with passion</p>
+                </div>
+            </div>
+            <div class="third-sec-wrap">
+                <div class="row">
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third1.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2014 Toyota Yaris</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third2.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third3.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third4.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2015 Vauxhall Adam</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third5.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third6.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2012 Vauxhall Astra</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third9.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2017 MBW 318i Sport</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third7.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third8.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2007 Seat Leon</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="fourth-sec" style="background-image: url('assets/img/fourthbg.webp');">
+        <div class="container container-animition" id="about-us">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="fourth-sec-card">
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <h2 class="third-sec-head">About Us</h2>
+                                <div class="row">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 border-bottom2"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="fourth-sec-txt">At Sanctuary Motors, we embrace our role as custodians of this proud legacy and uphold this responsibility in true British tradition: offering outstanding quality with unrivaled service.<br><br>
+
+                                    Sanctuary Motors is good for Mercedes-Benz, Alfa Romeo, and GAC Motors across UK. Our regional insights enable us to deliver integrated, innovative, and superior service and solutions to all UK customers. At Sanctuary Motors, customers are assured of premium quality products, exceptional service, and comprehensive after-sales support.Our financial services department introduces innovative schemes tailored to custor needs and aligned with global policies and structures.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                                <h2 class="third-sec-head">Statement</h2>
+                                <div class="row">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 border-bottom2"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="fourth-sec-txt">Sanctuary Motors Ltd has both medium term and long term strategy. In the medium term, the company aspire to offer engineering consultancy as well as offer customers an automotive dealership.<br><br>
+                                    In the long term, the Sanctuary Motors Ltd aspire to set up in-house manufacturing capability to style and manufacture automotive body panels by utilising advanced design and manufacturing techniques and also to offer a unique dealership for a niche automotive industry.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fifth-sec" style="background-image: url('assets/img/third10.jpeg');">
+        <div class="container-fluid"></div>
+    </section>
+
+    <section class="sisth-sec" style="background-image: url('assets/img/fourthbg.webp');">
+        <div class="container container-animition" id="book-online">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <img class="sisth-sec-img" src="assets/img/sisth-sec-img.webp" alt="">
+                </div>
+            </div>
+
+
+            <div class="row container-animition"  id="contact-us">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="sisth-sec-wrap">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <h2 class="third-sec-head">Find Us</h2>
+                                <div class="row">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 border-bottom2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="sisth-sec-innerwrap">
+                                    <p class="sisth-sec-innerwrap-txt">Registered Address: 5Suite B Fairgate House, 205 Kings Road,Birmingham <br>
+                                        Reg Office: B11 2AA
+                                    </p>
+                                    <a href="mailto:info@mysite.com" class="sisth-sec-innerwrap-txt">Email: info@mysite.com</a><br>
+                                    <a href="tel:123-456-7890" class="sisth-sec-innerwrap-txt">Tel: 123-456-7890</a>
+
+                                    <h6 class="sisth-sec-innerwrap-txt2">OPENING HOURS:</h6>
+                                    <p class="sisth-sec-innerwrap-txt">Mon - Fri: 7am - 10pm</p>
+                                    <p class="sisth-sec-innerwrap-txt">​​Saturday: 8am - 10pm</p>
+                                    <p class="sisth-sec-innerwrap-txt">​​Sunday: 8am - 11pm</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="sisth-sec-innerwrap2">
+                                    <div class="sisth-sec-innerwrap-form">
+                                        <form action="">
+                                            <label class="sis-form-label" for="fname">First name</label><br>
+                                            <input class="sis-form-imput" type="text" id="fname" name="fname"
+                                                value="John"><br>
+                                            <label class="sis-form-label" for="lname">Last name</label><br>
+                                            <input class="sis-form-imput" type="text" id="lname" name="lname"
+                                                value="Doe"><br>
+                                            <label class="sis-form-label" for="email">Email</label><br>
+                                            <input class="sis-form-imput" type="text" id="email" name="email"><br>
+                                            <label class="sis-form-label" for="subject">Subject</label><br>
+                                            <input class="sis-form-imput" type="text" id="subject" name="email"><br>
+                                            <label class="sis-form-label" for="subject">Message</label><br>
+                                            <textarea class="sis-form-textarea" name="" id=""></textarea><br><br>
+                                            <button type="submit">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container container-animition">
+            <div class="row">
+                <div class="footer-sec-wrap">
+                    <div class="footer sec innerwrap">
+                        <i class="fa-brands fa-facebook-f banner-icon" style="padding: 10px 12px;"></i>
+                        <i class="fa-brands fa-pinterest-p banner-icon" style="padding: 10px 11px;"></i>
+                        <i class="fa-brands fa-instagram banner-icon"></i>
+                    </div>
+                    <p>© 2024 Sanctuary Motors</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    
+
+// Ninth Section Counter 
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.ninth-sec-innerwrap-txt2, .third-sec-inner-wrap2-head span');
+
+    const isElementInViewport = (el) => {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
+
+    const animateCount = (el) => {
+        const countTo = parseInt(el.getAttribute('data-count'), 10);
+        const duration = 2000; // duration in milliseconds
+        const frameRate = 60; // frames per second
+        const totalFrames = Math.round(duration / (1000 / frameRate));
+        let currentFrame = 0;
+        const increment = countTo / totalFrames;
+        const suffix = el.innerHTML.includes('K') ? ' K' : el.innerHTML.includes('+') ? ' +' : '';
+
+        const counter = setInterval(() => {
+            currentFrame++;
+            const progress = Math.round(increment * currentFrame);
+            el.innerHTML = progress + suffix;
+            if (currentFrame >= totalFrames) {
+                clearInterval(counter);
+                el.innerHTML = countTo + suffix;
+            }
+        }, 1000 / frameRate);
+    };
+
+    const handleScroll = () => {
+        elements.forEach(el => {
+            if (isElementInViewport(el) && !el.classList.contains('counted')) {
+                el.classList.add('counted');
+                animateCount(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    // Initial check in case elements are already in view
+    handleScroll();
+});
+// Ninth Section counter end 
+
+// Animition JS
+var scroll = window.requestAnimationFrame || function (callback) {
+    window.setTimeout(callback, 1000 / 60);
+};
+
+var elementsToShow = document.querySelectorAll(".container-animition");
+
+function loop() {
+    elementsToShow.forEach(function (element) {
+        if (isElementInViewport(element)) {
+            element.classList.add("active");
+        } else {
+            element.classList.remove("active"); // Corrected class name
+        }
+    });
+
+    scroll(loop);
+}
+
+function isElementInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+    );
+}
+
+loop(); // Initial call to set up the loop
+window.addEventListener('scroll', loop); // Call on scroll
+window.addEventListener('resize', loop); // Call on resize
+
+</script>
+</body>
+
+</html>

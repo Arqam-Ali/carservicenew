@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Sanctuary - Motors</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Slick Carousel CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+        <!-- Include Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Owl Carousel CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+        <!-- Custom CSS -->
+        <link href="assets/css/custom.css" rel="stylesheet">
+    </head>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-black pt-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-top" style="max-height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+               
+                <ul class="navbar-nav ml-auto mr-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2 nav-active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#services">Service</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link nav-link2 dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pages
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <a class="dropdown-item" href="#">About Us</a>
+                            <a class="dropdown-item" href="#">Services</a>
+                            <a class="dropdown-item" href="#">Team</a>
+                            <a class="dropdown-item" href="#">FAQ</a>
+                        </div>
+                    </li> -->
+                   
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#about-us">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#contact-us">Contact</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#book-online">Book Online</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link2" href="https://kbconstruction.pk/car/">Current Stock</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link nav-link2" href="#"><i class="fa-solid fa-user icon-hover"></i> Log In</a>
+                    </li> -->
+                    <div class="vertical-border"></div>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="banner-sec" style="background-image: url('assets/img/banner.jpeg');">
+        <div class="container-fluid container-animition">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="banner-sec-wrap">
+                        <div class="banner-sec-wrap-svg">
+                            <img src="assets/img/logo1.png" alt="">
+                            <!-- <svg preserveAspectRatio="xMidYMid meet" data-bbox="26.453 27.436 147.035 145.129"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="26.453 27.436 147.035 145.129"
+                                role="presentation" aria-hidden="true" width="100px" fill="white">
+                                <g>
+                                    <path
+                                        d="M63.2 136.9c8.4 8.4 8.4 22.1 0 30.5-2.3 2.3-5.1 4.1-8.2 5.1-.8.3-1.6-.5-1.4-1.3l4.7-16c.1-.5.1-1-.2-1.3-4.6-6.2-12.4-8.5-19.6-5.7-.4.2-.8.5-.9 1L32.9 165c-.2.8-1.3 1-1.9.4-6.6-8.5-6-20.7 1.7-28.5 8.4-8.4 22.1-8.5 30.5 0zm0-73.8c8.4-8.4 8.4-22.1 0-30.5-2.3-2.3-5.1-4.1-8.2-5.1-.8-.3-1.6.5-1.4 1.3l4.7 16c.1.5.1 1-.2 1.3-4.6 6.2-12.4 8.5-19.6 5.7-.4-.2-.8-.5-.9-1L32.9 35c-.2-.8-1.3-1.1-1.9-.4-6.6 8.5-6 20.7 1.7 28.5 8.4 8.4 22.1 8.5 30.5 0zm104 0c7.7-7.7 8.4-20 1.7-28.5-.5-.7-1.6-.5-1.9.4l-4.6 15.9c-.1.5-.5.9-.9 1-7.2 2.8-15 .5-19.6-5.7-.3-.4-.4-.9-.2-1.3l4.7-16c.2-.8-.6-1.6-1.4-1.3-3.1 1.1-5.9 2.9-8.2 5.1-8.4 8.4-8.4 22 0 30.5 8.4 8.4 22.1 8.3 30.4-.1zm-37.8 2.4c1.5 2 3.1 3.5 5.1 5.1l-21.8 21.8 5.1 5.1L138 77.3c3.3-3.3 7.4-5.7 11.8-7-5-.5-9.8-2.6-13.6-6.4-3.8-3.8-5.9-8.7-6.4-13.6-1.3 4.5-3.7 8.5-7 11.8l-20.2 20.2 5.1 5.1 21.7-21.9zm-58.8 69c-1.5-2-3.1-3.5-5.1-5.1l21.8-21.8-5.1-5.1L62 122.7c-3.3 3.3-7.4 5.7-11.8 7 5 .5 9.8 2.6 13.6 6.4 3.8 3.8 5.9 8.7 6.4 13.6 1.3-4.5 3.7-8.5 7-11.8l20.2-20.2-5.1-5.1-21.7 21.9zm96.6 2.4c-8.4-8.4-22-8.4-30.4 0-8.4 8.4-8.4 22.1 0 30.5 2.3 2.3 5.1 4.1 8.2 5.1.8.3 1.6-.5 1.4-1.3l-4.7-16c-.1-.5-.1-1 .2-1.3 4.6-6.2 12.4-8.5 19.6-5.7.4.2.8.5.9 1l4.6 15.9c.2.8 1.3 1 1.9.4 6.7-8.7 6-20.9-1.7-28.6zm-31-.7c-3.8 3.8-5.9 8.7-6.4 13.6-1.3-4.5-3.7-8.5-7-11.8L62.1 77.2c-3.3-3.3-7.4-5.7-11.8-7 5-.5 9.8-2.6 13.6-6.4 3.8-3.8 5.9-8.7 6.4-13.6 1.3 4.5 3.7 8.5 7 11.8l60.7 60.8c3.3 3.3 7.4 5.7 11.8 7-5 .5-9.8 2.6-13.6 6.4zm-1.8-6.8L70.6 65.5c-1.5 2-3.1 3.5-5.1 5.1l63.8 63.9c1.6-2 3.2-3.6 5.1-5.1z">
+                                    </path>
+                                </g>
+                            </svg> -->
+                        </div>
+                        <h1 class="banner-sec-wrap-head">SANCTUARY</h1>
+                        <p class="banner-sec-wrap-txt">MOTORS LIMITED</p>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="banner-sec-wrap2">
+                        <i class="fa-brands fa-facebook-f banner-icon" style="padding: 10px 12px;"></i>
+                        <i class="fa-brands fa-pinterest-p banner-icon" style="padding: 10px 11px;"></i>
+                        <i class="fa-brands fa-instagram banner-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second-sec" style="background-image: url('assets/img/sec2bg.webp');">
+        <div class="container-fluid container-animition" id="services">
+            <div class="row">
+                <div class="col-md-5"></div>
+                <div class="col-md-2">
+                    <h2 class="second-sec-head">ADDITIONAL SERVICES</h2>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2 border-bottom"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row container-animition">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <div class="second-sec-service">
+                        <i class="fa-solid fa-screwdriver-wrench second-icon"></i>
+                        <h3 class="second-sec-service-head">REPAIRS</h3>
+                        <p class="second-sec-service-txt">General Repairs, <br> Specialist Repairs <br>& Vintage Parts
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="second-sec-service">
+                        <i class="fa-solid fa-truck-monster second-icon2"></i>
+                        <h3 class="second-sec-service-head">UPHOLSTERY</h3>
+                        <p class="second-sec-service-txt">A Range of Fabrics, <br> Including Vintage Leathers, <br>&
+                            Wide Variety of Colors</p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="second-sec-service">
+                        <i class="fa-solid fa-spray-can second-icon"></i>
+                        <h3 class="second-sec-service-head">PAINTWORK</h3>
+                        <p class="second-sec-service-txt">Spray paint, Custom <br> Stencilling & Variety of <br>Custom
+                            Made Artwork</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="third-sec">
+        <div class="container container-animition">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <h2 class="third-sec-head" >CURRENT STOCK</h2>
+                    <div class="row">
+                        <div class="col-5"></div>
+                        <div class="col-2 border-bottom2"></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p class="third-sec-txt">A collection of cars we've renovated with passion</p>
+                </div>
+            </div>
+            <div class="third-sec-wrap">
+                <div class="row">
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third1.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2014 Toyota Yaris</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third2.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third3.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third4.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2015 Vauxhall Adam</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third5.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third6.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2012 Vauxhall Astra</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third9.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2017 MBW 318i Sport</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third7.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">Image Title</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 third-sec-card">
+                        <div class="third-sec-wrap-img" style="background-image: url('assets/img/third8.jpeg');">
+                            <div class="overlay"></div>
+                            <h3 class="third-sec-wrap-head">2007 Seat Leon</h3>
+                            <p class="third-sec-wrap-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Placeat blanditiis rerum vero ipsum saepe ea consequuntur nulla soluta dignissimos
+                                officiis!</p>
+                            <div class="third-sec-wrap-icons">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-share"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="fourth-sec" style="background-image: url('assets/img/fourthbg.webp');">
+        <div class="container container-animition" id="about-us">
+            <div class="row">
+                <!-- <div class="col-md-2"></div> -->
+                <div class="col-md-6">
+                    <div class="fourth-sec-card fourth-sec-card2">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="third-sec-head">About Us</h2>
+                                <div class="row">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 border-bottom2"></div>
+                                </div>
+                                <p class="fourth-sec-txt">At Sanctuary Motors, we embrace our role as custodians of this proud legacy and uphold this responsibility in true British tradition: offering outstanding quality with unrivaled service.<br><br>
+
+                                    Sanctuary Motors is good for Mercedes-Benz, Alfa Romeo, and GAC Motors across UK. Our regional insights enable us to deliver integrated, innovative, and superior service and solutions to all UK customers. At Sanctuary Motors, customers are assured of premium quality products, exceptional service, and comprehensive after-sales support.Our financial services department introduces innovative schemes tailored to custor needs and aligned with global policies and structures.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="fourth-sec-card">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="third-sec-head">Statement</h2>
+                                <div class="row">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 border-bottom2"></div>
+                                </div>
+                                <p class="fourth-sec-txt">Sanctuary Motors Ltd has both medium term and long term strategy. In the medium term, the company aspire to offer engineering consultancy as well as offer customers an automotive dealership.<br><br>
+                                    In the long term, the Sanctuary Motors Ltd aspire to set up in-house manufacturing capability to style and manufacture automotive body panels by utilising advanced design and manufacturing techniques and also to offer a unique dealership for a niche automotive industry.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fifth-sec" style="background-image: url('assets/img/third5.jpeg');">
+        <div class="container-fluid"></div>
+    </section>
+
+    <section class="sisth-sec" style="">
+        <div class="container container-animition" id="book-online">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <img class="sisth-sec-img" src="assets/img/carimg2.png" alt="">
+                </div>
+            </div>
+
+
+            <div class="row container-animition"  id="contact-us">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="sisth-sec-wrap">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <h2 class="third-sec-head">Find Us</h2>
+                                <div class="row">
+                                    <div class="col-5"></div>
+                                    <div class="col-2 border-bottom2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="sisth-sec-innerwrap">
+                                    <p class="sisth-sec-innerwrap-txt">Registered Address: 5Suite B Fairgate House, 205 Kings Road,Birmingham <br>
+                                        Reg Office: B11 2AA
+                                    </p>
+                                    <a href="mailto:SanctuarymotorsLtd@hotmail.com" class="sisth-sec-innerwrap-txt">Email: SanctuarymotorsLtd@hotmail.com</a><br>
+                                    <a href="tel:+447841407544" class="sisth-sec-innerwrap-txt">Tel: +447841407544</a>
+
+                                    <h6 class="sisth-sec-innerwrap-txt2">OPENING HOURS:</h6>
+                                    <p class="sisth-sec-innerwrap-txt">Mon - Fri: 7am - 10pm</p>
+                                    <p class="sisth-sec-innerwrap-txt">​​Saturday: 8am - 10pm</p>
+                                    <p class="sisth-sec-innerwrap-txt">​​Sunday: 8am - 11pm</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="sisth-sec-innerwrap2">
+                                    <div class="sisth-sec-innerwrap-form">
+                                        <form action="">
+                                            <label class="sis-form-label" for="fname">First name</label><br>
+                                            <input class="sis-form-imput" type="text" id="fname" name="fname"
+                                                value="John"><br>
+                                            <label class="sis-form-label" for="lname">Last name</label><br>
+                                            <input class="sis-form-imput" type="text" id="lname" name="lname"
+                                                value="Doe"><br>
+                                            <label class="sis-form-label" for="email">Email</label><br>
+                                            <input class="sis-form-imput" type="text" id="email" name="email"><br>
+                                            <label class="sis-form-label" for="subject">Subject</label><br>
+                                            <input class="sis-form-imput" type="text" id="subject" name="email"><br>
+                                            <label class="sis-form-label" for="subject">Message</label><br>
+                                            <textarea class="sis-form-textarea" name="" id=""></textarea><br><br>
+                                            <button type="submit">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container container-animition">
+            <div class="row">
+                <div class="footer-sec-wrap">
+                    <div class="footer sec innerwrap">
+                        <i class="fa-brands fa-facebook-f banner-icon" style="padding: 10px 12px;"></i>
+                        <i class="fa-brands fa-pinterest-p banner-icon" style="padding: 10px 11px;"></i>
+                        <i class="fa-brands fa-instagram banner-icon"></i>
+                    </div>
+                    <p>© 2024 Sanctuary Motors</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Popper.js (required for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
