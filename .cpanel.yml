@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/kbconstr/public_html/
+    - /bin/cp * $DEPLOYPATH
